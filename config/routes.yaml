@@ -1,0 +1,24 @@
+index:
+    path: /index
+    controller: App\Controller\IndexController::index
+
+quotes_double:
+    path: /quotesDouble
+    controller: App\Controller\IndexController::quotesDouble
+
+quotes_simple:
+    path: /quotesSimple
+    controller: App\Controller\IndexController::quotesSimple
+
+#
+#fibonacci:
+#    path: /fibonacci
+#    controller: App\Controller\IndexController::fibonacci_test
+#
+#lap:
+#    path: /lap
+#    controller: App\Controller\IndexController::lap
+#
+#sections:
+#    path: /sections
+#    controller: App\Controller\IndexController::sections

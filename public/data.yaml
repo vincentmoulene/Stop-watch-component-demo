@@ -1,0 +1,44 @@
+# Comments in YAML look like this.
+
+################
+# SCALAR TYPES #
+################
+
+# Our root object (which continues for the entire document) will be a map,
+# which is equivalent to a dictionary, hash or object in other languages.
+key: value
+another_key: Another value goes here.
+a_number_value: 100
+scientific_notation: 1e+12
+# The number 1 will be interpreted as a number, not a boolean. if you want
+# it to be interpreted as a boolean, use true
+boolean: true
+null_value: null
+key with spaces: value
+# Notice that strings don't need to be quoted. However, they can be.
+however: 'A string, enclosed in quotes.'
+'Keys can be quoted too.': "Useful if you want to put a ':' in your key."
+single quotes: 'have ''one'' escape pattern'
+double quotes: "have many: \", \0, \t, \u263A, \x0d\x0a == \r\n, and more."
+
+# YAML also has a handy feature called 'anchors', which let you easily duplicate
+# content across your document. Both of these keys will have the same value:
+anchored_content: &anchor_name This string will appear as the value of two keys.
+other_anchor: *anchor_name
+
+# foo and bar would also have name: Everyone has same name
+
+# YAML also has tags, which you can use to explicitly declare types.
+explicit_string: !!str 0.5
+
+####################
+# EXTRA YAML TYPES #
+####################
+
+# Strings and numbers aren't the only scalars that YAML can understand.
+# ISO-formatted date and datetime literals are also parsed.
+datetime: 2001-12-15T02:59:43.1Z
+datetime_with_spaces: 2001-12-14 21:59:43.10 -5
+date: 2002-12-14
+
+# YAML also has a set type, which looks like this:
